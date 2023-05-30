@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Dezem"
+  name: "Dezem Cute Jinx"
   text: "the SSG of Dezem."
   tagline: My great project tagline
   actions:
