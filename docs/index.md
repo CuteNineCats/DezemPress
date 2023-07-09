@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
+    - there: alt
+      text: Bookmark
+      link: /bookmark/java-base.md
 
 features:
   - title: Feature A
