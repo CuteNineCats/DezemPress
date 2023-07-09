@@ -32,10 +32,10 @@
 12. Java 对应的装箱和拆箱操作。
     1. 不当的代码会有大量的装箱，拆箱操作，影响性能。
     2. 实际应用中优先使用基本类型，包装类型的合理使用场景有：
-       1. 作为集合中元素，键和值。
-       2. 作为泛型。
-       3. 反射方法需要调用包装类。
-       4. POJO类的属性，RPC方法返回值和参数需要序列化且可能缺失值的场景。
+       - 作为集合中元素，键和值。
+       - 作为泛型。
+       - 反射方法需要调用包装类。
+       - POJO类的属性，RPC方法返回值和参数需要序列化且可能缺失值的场景。
     3. 包装类比较时，应使用`equals()`，`compareTo()`等方法，不要使用 == 进行等值判断。
     4. 包装类型用于数值计算，设计拆箱操作，可能会出现`NullPointException`。
 13. 需要使用括号明确运算顺序，比如涉及到位运算操作，多种操作且优先级混淆。
@@ -45,13 +45,13 @@
     1. 返回数组的场景，推荐返回长度为0的数组。
     2. 返回集合的场景，推荐返回空集合。
     3. 其他场景使用 `Optional` 代替 null 作为返回值。
-       1. 禁止对`Optional`对象赋值/返回null，或与 null 比较。
-       2. 对于`Optional<Integer>`，`Optional<Long>`，`Optional<Double>` 应使用`OptionalInt`, `OptionalLong`, `OptionalDouble`代替。
-       3. 如果文档注释明确返回值用于数值计算密集型，或者用于序列化，那么可以返回`T`，或者 null，无需 `Optional<T>`。
-       4. 一般不应返回 `Optional<集合或数组>`，而用空集合或空数组代替。
-       5. `Optional.of()`参数不能为null，否则也会抛出 NPE 。
+       - 禁止对`Optional`对象赋值/返回null，或与 null 比较。
+       - 对于`Optional<Integer>`，`Optional<Long>`，`Optional<Double>` 应使用`OptionalInt`, `OptionalLong`, `OptionalDouble`代替。
+       - 如果文档注释明确返回值用于数值计算密集型，或者用于序列化，那么可以返回`T`，或者 null，无需 `Optional<T>`。
+       - 一般不应返回 `Optional<集合或数组>`，而用空集合或空数组代替。
+       - `Optional.of()`参数不能为null，否则也会抛出 NPE 。
     
-### 类和接口设计指导原则。
+## 类和接口设计指导原则。
 
 1. 
 
