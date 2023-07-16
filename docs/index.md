@@ -15,7 +15,7 @@ hero:
       link: /api-examples
     - there: alt
       text: Bookmark
-      link: /bookmark/java-base.md
+      link: /bookmark/java-base
 
 features:
   - title: Feature A
