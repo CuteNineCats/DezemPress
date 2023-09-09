@@ -42,22 +42,30 @@ sudo docker run hello-world
 - 重启名为 nacos 的容器 docker restart nacos  
 - 删除名为 nacos 的容器 docker rm -v nacos  
 - 跟踪容器日志 docker logs -f nacos  
-- 列出所有启动和未启动的容器 docker ps -a  
-- 列举所有的 images docker images -a  
-- docker cp nacos:/home/data /root/volumes/nacos/home  
-- 将nacos 容器内 /home/data 路径下的数据 copy 到 本地 /root/volumes/nacos/home 下  
-- docker build -t name:1.0 -f ./Dockerfile . 以当前文件夹下 Dockerfile 文件构建镜像  
-- docker compose -f ./docker-compose.yml up 以当前文件夹下的 docker-compose.yml 文件构建服务  
-- docker attach 'container_name' 连接容器 (Ctrl + p Ctrl +q) 断开连接  
-- docker pull 拉取镜像 image  
-- docker exec -it 'container_name' /bin/bash  
+- 列出所有启动和未启动的容器 docker ps -a
+- 列举所有的镜像 docker images -a
+- docker compose -f ./docker-compose.yml up 以当前文件夹下的 docker-compose.yml 文件构建服务
+
+
 ### docker container  
 - ls 列举现存容器  
 - stop 'container_name'... 停止列举的容器名  
 - rm 'container_name'... 删除列举的容器名  
+- docker attach 'container_name' 连接容器 (Ctrl + p Ctrl +q) 断开连接  
+- docker exec -it 'container_name' /bin/bash
+
 ### docker network  
 - ls 列举现存网络  
 - inspect 'network_name' 查看网络信息  
 - rm 'network_name' 删除网络  
 - connect 'network_name' 'container_name' 将某单例容器加入到某网络  
 - disconnect 'network_name' 'container_name' 将某单例容器断开某网络  
+
+## 数据 copy
+- docker cp nacos:/home/data /root/volumes/nacos/home
+- 将nacos 容器内 /home/data 路径下的数据 copy 到 本地 /root/volumes/nacos/home 下  
+
+## Image 镜像
+- docker pull 拉取镜像 image  
+- docker build -t name:1.0 -f ./Dockerfile . 以当前文件夹下 Dockerfile 文件构建镜像  
+
