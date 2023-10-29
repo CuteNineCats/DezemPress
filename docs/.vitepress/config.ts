@@ -19,7 +19,8 @@ export default defineConfig({
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' },
           { text: 'Java Base Knowledge', link: '/bookmark/java-base'},
-          { text: 'Deploy Docker in Linux', link: '/bookmark/deploy-docker-linux'}
+          { text: 'Deploy Docker in Linux', link: '/bookmark/deploy-docker-linux'},
+          { text: 'Code Arts Snap', link: '/bookmark/code-arts-snap'},
         ]
       }
     ],
